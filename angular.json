@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "motorweb-client": {
+    "medical-departures-test": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/motorweb-client",
+            "outputPath": "dist/medical-departures-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,12 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/tailwind-light/theme.css",
-              "node_modules/primeng/resources/primeng.min.css",
-              "src/theme/_bootstrap-grid.min.scss",
-              "src/theme/_custom-theme.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/stylesheets/_bootstrap-grid.min.scss"
             ],
             "scripts": []
           },
@@ -55,11 +51,11 @@
               ],
               "outputHashing": "all",
               "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
+                  {
+                    "replace": "src/environments/environment.ts",
+                    "with": "src/environments/environment.prod.ts"
+                  }
+                ]
             },
             "development": {
               "buildOptimizer": false,
@@ -76,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "motorweb-client:build:production"
+              "browserTarget": "medical-departures-test:build:production"
             },
             "development": {
-              "browserTarget": "motorweb-client:build:development"
+              "browserTarget": "medical-departures-test:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "motorweb-client:build"
+            "browserTarget": "medical-departures-test:build"
           }
         },
         "test": {
@@ -104,12 +100,8 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/tailwind-light/theme.css",
-              "node_modules/primeng/resources/primeng.min.css",
-              "src/theme/_bootstrap-grid.min.scss",
-              "src/theme/_custom-theme.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/stylesheets/_bootstrap-grid.min.scss"
             ],
             "scripts": []
           }
