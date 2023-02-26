@@ -11,9 +11,9 @@
             <td>{{td.id}}</td>
             <td class="title">{{td.title}}</td>
             <td *ngIf="td.actions" class="actions">
-                <img src="../../../../assets/icons/eye.svg" (click)="onClickView.emit(td.id)"/>
-                <img src="../../../../assets/icons/pencil.svg" (click)="onClickEdit.emit(td)"/>
-                <img src="../../../../assets/icons/trash.svg" (click)="onClickDelete.emit(td.id)"/>
+                <div><img src="../../../../assets/icons/eye.svg" (click)="onClickView.emit(td.id)" /></div>
+                <div><img src="../../../../assets/icons/pencil.svg" (click)="onClickEdit.emit(td)" /></div>
+                <div><img src="../../../../assets/icons/trash.svg" (click)="onClickDelete.emit(td.id)" /></div>
             </td>
         </tr>
     </ng-container>

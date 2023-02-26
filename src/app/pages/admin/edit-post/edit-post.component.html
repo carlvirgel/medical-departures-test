@@ -1,15 +1,17 @@
-<form  class='container' (ngSubmit)="onSubmit()" [formGroup]="form" *ngIf="form">
-    <div class="row">
-        <div class="input-wrapper">
-            <label for="title">Title</label>
-            <input id="title" type="text" formControlName="title"/>
+<div class='container'>
+    <form class="row" (ngSubmit)="onSubmit()" [formGroup]="form" *ngIf="form">
+        <div class="col-md">
+            <div class="input-wrapper">
+                <label for="title">Title</label>
+                <input id="title" type="text" formControlName="title" />
+            </div>
+            <div class="input-wrapper">
+                <label for="body">Body</label>
+                <textarea id="body" formControlName="body"></textarea>
+            </div>
+            <div class="input-wrapper">
+                <button type="submit">{{ isNew ? 'Add new Post': 'Update Post' }}</button>
+            </div>
         </div>
-        <div class="input-wrapper">
-            <label for="body">Body</label>
-            <textarea id="body" formControlName="body"></textarea> 
-        </div>
-        <div class="input-wrapper">
-           <button type="submit">{{ isNew ? 'Add new Post': 'Update Post' }}</button>
-        </div>
-    </div>
-</form>
+    </form>
+</div>
