@@ -32,6 +32,13 @@ export class PostStore extends EntityStore<PostState> {
     this.update(post.id, post);
   }
 
+  updateIsload(isLoaded: boolean) {
+    this.update((state: any) => ({
+      ...state,
+      isLoaded
+    }));
+  }
+
 }
 
 export const sessionPostPersistStorage = persistState({
