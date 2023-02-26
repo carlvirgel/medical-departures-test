@@ -1,0 +1,31 @@
+.header-wrapper {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 10px;
+    box-shadow: 3px 1px 25px -3px rgba(199,199,199,0.41);
+    .header-logo {
+        display: inline-block;
+        cursor: pointer;
+        img {
+            max-width: 150px;
+        }
+    }
+    .menu-wrapper {
+        display: inline;
+        float: right;
+        ol {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            margin-top: 10px;
+            text-transform: capitalize;
+            li {
+                float: left;
+                cursor: pointer;
+                margin-right: 20px;
+            }
+        }
+    }
+}

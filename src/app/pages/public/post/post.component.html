@@ -1,0 +1,20 @@
+<div class="container post-wrapper" *ngIf="post && !isLoading">
+    <h1>{{post.title}}</h1>
+    <p>{{post.body}}</p>
+</div>
+
+<div class="container post-wrapper" *ngIf="!(post && !isLoading)">
+
+    <br />
+    <h1>
+        <div class="skeleton skeleton-text"></div>
+        <div class="skeleton skeleton-text" style="width: 90%"></div>
+    </h1>
+  
+    <div class="skeleton skeleton-text"></div>
+    <div class="skeleton skeleton-text" style="width: 90%"></div>
+    <br />
+    <div class="skeleton skeleton-text"></div>
+    <div class="skeleton skeleton-text" style="width: 90%"></div>
+    
+</div>

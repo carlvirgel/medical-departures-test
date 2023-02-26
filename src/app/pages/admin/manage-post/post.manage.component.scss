@@ -1,0 +1,18 @@
+.manage-post-wrapper {
+    position: relative;
+    width: 100%;
+    .new-post {
+        position: absolute;
+        right: 0;
+        top: -10px;
+        display: inline-block;
+        width: initial;
+    }
+    p {
+        background: white;
+        color: rgb(225, 163, 5);
+        border: 1px solid rgb(255, 228, 73);
+        padding: 10px;
+        border-radius: 6px;
+    }
+}

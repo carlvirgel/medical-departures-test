@@ -1,0 +1,21 @@
+<table class="table-wrapper">
+    <tr>
+        <ng-container *ngFor="let th of headers">
+            <th> {{th}}</th>
+        </ng-container>
+        <th>Actions</th>
+    </tr>
+
+    <ng-container *ngFor="let td of dataTable">
+        <tr>
+            <td>{{td.id}}</td>
+            <td class="title">{{td.title}}</td>
+            <td *ngIf="td.actions" class="actions">
+                <img src="../../../../assets/icons/eye.svg" (click)="onClickView.emit(td.id)"/>
+                <img src="../../../../assets/icons/pencil.svg" (click)="onClickEdit.emit(td)"/>
+                <img src="../../../../assets/icons/trash.svg" (click)="onClickDelete.emit(td.id)"/>
+            </td>
+        </tr>
+    </ng-container>
+
+</table>

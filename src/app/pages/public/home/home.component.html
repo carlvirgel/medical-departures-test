@@ -1,0 +1,20 @@
+<div class="container">
+    <h3> Latest articles</h3>
+    <div class="row" *ngIf="!(isLoading$ | async)">
+        <ng-container *ngFor="let post of posts$ | async">
+            <div class="col-md-4">
+                <div class="post-panel panel-link" (click)="onClickPost(post)">
+                    <div class='title'>{{post.title}}</div>
+                    <p class='body'>{{post.body}}</p>
+                </div>
+            </div>
+         </ng-container>
+    </div>
+    <div class="row" *ngIf="(isLoading$ | async)">
+        <div class="col-md-4"  *ngFor="let item of [].constructor(10);"> 
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width: 90%"></div>
+            <br/>
+        </div>
+    </div>
+</div>

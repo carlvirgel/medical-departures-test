@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="manage-post-wrapper">
+        <h2>Manage Posts</h2>
+        <div class="input-wrapper new-post">
+            <button (click)="newPost()"> CREATE NEW POST </button>
+        </div>
+        <p class="text-center"><small><b>Note: Current account login can only manage their own posts. Also, creating a new data and editing
+                afterwards will create an error due to some newly created id not able to find.</b></small></p>
+        <app-table [dataTable]="(posts$ | async)" [headers]="headers" (onClickDelete)="deletePost($event)"
+            (onClickView)="viewPost($event)" (onClickEdit)="editPost($event)">
+
+        </app-table>
+
+    </div>
+</div>

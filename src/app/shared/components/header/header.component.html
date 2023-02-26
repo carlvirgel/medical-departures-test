@@ -1,0 +1,18 @@
+<div class="header-wrapper">
+    <div class="container">
+        <div class="header-logo" (click)="router.navigate(['/'])">
+            <img src="../../../../assets/images/logo.png"/>
+        </div>
+        <div class="menu-wrapper">
+            <ol>
+                <ng-container *ngIf="(userLoggedIn && userLoggedIn.id ==null)">
+                    <li (click)="router.navigate(['login'])">Login</li>
+                </ng-container>
+                <ng-container *ngIf="userLoggedIn && userLoggedIn.id !=null">
+                    <li (click)="router.navigate(['admin'])">Admin</li>
+                    <li (click)="router.navigateByUrl('/login?logout=true')">Logout</li>
+                </ng-container>
+            </ol>
+        </div>
+    </div>
+</div>

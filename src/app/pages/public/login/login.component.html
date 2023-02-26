@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md"></div>
+        <div class="col-md-5 card-panel mt-20">
+            <img src="../../../../assets/images/logo.png" style="max-width: 150px; margin: 0 auto; display: block;"/>
+            <h3>Choose an account</h3>
+            <div class="list-wrapper">
+                <ng-container *ngIf="!(isLoading$ | async )">
+                    <ng-container *ngFor="let user of user$ | async">
+                        <div class="list row" (click)="onClickLogin(user)">
+                            <div class="thumbnail-text" [ngStyle]="'#529dff' | randomColor ">
+                                {{ user.name.substring(0, 1) }}
+                            </div>
+                            <div class="col-md ">
+                                <div>{{ user.name }}</div>
+                                <small>{{ user.email }}</small>
+                            </div>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <div class="list row" *ngIf="(isLoading$ | async)">
+                  
+                    <div class="col-md-12"  *ngFor="let item of [].constructor(10);"> 
+                        <div class="skeleton skeleton-text"></div>
+                        <div class="skeleton skeleton-text" style="width: 90%"></div>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md"></div>
+    </div>
+</div>

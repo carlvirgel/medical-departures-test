@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
-import { PostComponent } from './pages/post/post.component';
+import { AuthGuard } from './core/guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -10,9 +9,9 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomeComponent,
+        loadChildren: () => import('./pages/public/public.module').then(m => m.PublicModule)
       },
-      { path: 'post', component: PostComponent }
+      { path: 'admin', loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule), canActivate: [AuthGuard] } 
     ]
   }
 ];
