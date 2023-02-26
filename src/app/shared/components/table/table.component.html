@@ -8,7 +8,7 @@
 
     <ng-container *ngFor="let td of dataTable">
         <tr>
-            <td>{{td.id}}</td>
+            <td class="text-center">{{td.id}}</td>
             <td class="title">{{td.title}}</td>
             <td *ngIf="td.actions" class="actions">
                 <div><img src="../../../../assets/icons/eye.svg" (click)="onClickView.emit(td.id)" /></div>
