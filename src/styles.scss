@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
 @font-face {
     font-family: 'Open Sans';
     src: url('stylesheets/fonts/OpenSans-Regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 
 
 body, html {
@@ -191,3 +193,11 @@ body, html {
         }
    }
   }
+    .quote-bg{
+        background-color: #101010;
+}
+  @media (max-width: 48em) {
+    .quote-bg{
+        background-color: #ffffff;
+    }
+}

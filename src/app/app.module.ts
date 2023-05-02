@@ -9,10 +9,20 @@ import { environment } from 'src/environments/environment';
 import { SharedModule } from './shared/shared.module';
 import { AdminModule } from './pages/admin/admin.module';
 import { PublicModule } from './pages/public/public.module';
+import { CreateFormComponent } from './pages/public/create-form/create-form.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
+//primeng 
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { AnimateModule } from 'primeng/animate';
+import { DropdownModule } from 'primeng/dropdown';
 @NgModule({
     declarations: [
         AppComponent,
+        CreateFormComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -23,6 +33,12 @@ import { PublicModule } from './pages/public/public.module';
         PublicModule,
         AdminModule,
         SharedModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        AnimateModule,
+        InputTextModule,
+        ButtonModule,
+        DropdownModule,
         environment.production
             ? []
             : AkitaNgDevtools.forRoot({

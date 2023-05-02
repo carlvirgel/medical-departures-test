@@ -1,0 +1,43 @@
+<div class="flex flex-column justify-content-center align-items-center h-screen ">
+    <div class="sm:w-full md:w-9 p-3 border-round-sm quote-bg">
+        <div class="mb-4 p-3 md:text-white">
+            <h2>Get a free quote</h2>
+            <p>See how much you can save with a Dentist abroad.</p>
+            <p>We'll get back to you in a flash.</p>
+        
+        </div>
+        <form class="form md:text-white p-3" [formGroup]="quoteForm">
+            <div class="flex flex-wrap gap-3">
+                <div class="flex flex-1 flex-column mb-2">
+                    <label class="label mb-1">Name <span class="required">*</span></label>
+                    <input type="text" pInputText formControlName="name"/>
+                </div>
+                <div class="flex flex-1 flex-column mb-2">
+                    <label class="label mb-1">Email Address <span class="required">*</span></label>
+                    <input type="text" pInputText formControlName="email"/>
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <div class="flex flex-1 flex-column mb-2">
+                    <label class="label mb-1">Phone Number <span class="required">*</span></label>
+                    <input type="text" pInputText formControlName="mobileno"/>
+                </div>
+                <div class="flex flex-1 flex-column mb-2">
+                    <label class="label mb-1">Choose treatment destination <span class="required">*</span></label>
+                    <input type="text" pInputText formControlName="treatmentDestination"/>
+                </div>
+            </div>
+            <div class="flex flex-column mb-2">
+                <label class="label mb-1">What treatment are you interested in? <span class="required">*</span></label>
+                <input type="text" pInputText formControlName="treatmentInterest"/>
+            </div>
+            <div class="flex flex-column mb-2">
+                <label class="label mb-1">Do you have any comments?</label>
+                <input type="text" pInputText formControlName="comments"/>
+            </div>
+
+
+            <button pButton pRipple label="Submit" class="p-button-success mt-5">Get Free Quote</button>
+        </form>
+    </div>
+</div>

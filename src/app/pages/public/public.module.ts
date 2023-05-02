@@ -6,6 +6,7 @@ import { SharedModule } from "../../shared/shared.module";
 import { RouterModule, Routes } from '@angular/router';
 import { PublicComponent } from './public.component';
 import { PostComponent } from './post/post.component';
+import { CreateFormComponent } from './create-form/create-form.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       { path: 'login', component: LoginComponent },
+      { path: 'get_quote', component: CreateFormComponent },
       { path: 'post/:id', component: PostComponent } 
     ]
   }
